@@ -10,11 +10,6 @@ const Context = ({ children }) => {
   const [isDark, setIsDark] = useState(false);
   const [search, setSearch] = useState('Frankfurt');
 
-  useState(() => {
-    const body = document.querySelector('body');
-    body.classList.toggle('dark-theme');
-  }, [isDark]);
-
   const toggleDark = () => {
     const theme = !isDark;
     const body = document.querySelector('body');
